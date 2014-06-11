@@ -1,0 +1,9 @@
+ME
+Crie um jogo de perguntas e respostas que funcione da seguinte forma. 
+Uma pergunta pode ser ter apenas duas respostas, exemplo:
+Qual o seu sexo?
+M F
+
+Cada uma das respostas, leva a uma nova pergunta, formando uma árvore binária.
+O que é para ser implementado?
+Apenas o árvore com uma forma de cadastrar as perguntas e liga-las a outras perguntas.
