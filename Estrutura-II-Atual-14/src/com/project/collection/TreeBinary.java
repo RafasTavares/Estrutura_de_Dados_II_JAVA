@@ -327,13 +327,13 @@ public class TreeBinary<E extends Comparable<E>> implements Serializable, ITreeB
     public void balancingTree() {
         ArrayList<E> arrayList = new ArrayList<E>();      
         IIterator<E> it = this.iteratorElement();
-        E obj = it.getFirst();
+        E element = it.getFirst();
         
         int i = -1;
-        while (obj != null) {
+        while (element != null) {
             i++;
-            arrayList.add(obj);
-            obj = it.getNext();
+            arrayList.add(element);
+            element = it.getNext();
         }
         
         ROOT = null;
@@ -342,12 +342,12 @@ public class TreeBinary<E extends Comparable<E>> implements Serializable, ITreeB
         generateBalancingTree(arrayList, 0, number);
     }
     
-    protected void generateBalancingTree(ArrayList<E> arrayList, int inicio, int fim) {
-        if (inicio <= fim) {
-            int meio = (inicio + fim) / 2;
-            add(arrayList.get(meio));
-            generateBalancingTree(arrayList, inicio, meio - 1);
-            generateBalancingTree(arrayList, meio + 1, fim);
+    protected void generateBalancingTree(ArrayList<E> arrayList, int begin, int end) {
+        if (begin <= end) {
+            int middle = (begin + end) / 2;
+            add(arrayList.get(middle));
+            generateBalancingTree(arrayList, begin, middle - 1);
+            generateBalancingTree(arrayList, middle + 1, end);
         }
     }
     
